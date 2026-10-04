@@ -1,3 +1,5 @@
+import re
+
 import numpy as np
 
 from resco_benchmark.agents.agent import Agent, IndependentAgent
@@ -272,6 +274,8 @@ class ACPolicy:
         if agent_name is not None:
             # for multi-agent system
             self.name += "_" + str(agent_name)
+        # TF scope names only allow [A-Za-z0-9_.\-/]; SUMO ids can contain e.g. '#'
+        self.name = re.sub(r"[^A-Za-z0-9_.\-/]", "_", self.name)
         self.n_a = n_a
         self.n_s = n_s
         self.n_step = n_step

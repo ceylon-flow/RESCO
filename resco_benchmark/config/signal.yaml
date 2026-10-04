@@ -1503,3 +1503,54 @@
     'top_mgr': [ 'bot_mgr' ],
     'bot_mgr': [ 'top_mgr' ]
   }}
+'katubedda': {
+  'phase_pairs': [ ['S-S', 'N-N'], ['S-E', 'N-W'], ['W-W', 'E-E'], ['W-S', 'E-N'], ['N-N', 'N-E'], ['W-N', 'W-S'] ],
+  'pair_to_act_map': {
+    'clusterJ0_J1_J10_J11_#4more': { 0: 0, 1: 1, 2: 2, 3: 3 },
+    'clusterJ10_J11_J12_J13_#2more': { 0: 0, 4: 1, 5: 2 },
+  },
+  'clusterJ0_J1_J10_J11_#4more': {
+    'lane_sets': {
+      'S-W': [ 'E8_0' ],
+      'S-S': [ 'E8_0', 'E8_1', 'E8_2' ],
+      'S-E': [ 'E8_3' ],
+      'W-N': [ 'E13_0' ],
+      'W-W': [ 'E13_0' ],
+      'W-S': [ 'E13_0' ],
+      'N-E': [ 'E9_0' ],
+      'N-N': [ 'E9_0', 'E9_1', 'E9_2' ],
+      'N-W': [ 'E9_3' ],
+      'E-S': [ 'E10_0' ],
+      'E-E': [ 'E10_0' ],
+      'E-N': [ 'E10_1' ]
+    },
+    'downstream': { 'N': null, 'E': null, 'S': 'clusterJ10_J11_J12_J13_#2more', 'W': null },
+    fixed_timings: [ 7, 1, 7, 1 ],
+    fixed_phase_order_idx: 0
+  },
+  'clusterJ10_J11_J12_J13_#2more': {
+    'lane_sets': {
+      'S-W': [ ],
+      'S-S': [ 'E14_0', 'E14_1', 'E14_2' ],
+      'S-E': [ 'E14_2' ],
+      'W-N': [ 'E4_0' ],
+      'W-W': [ ],
+      'W-S': [ 'E4_1' ],
+      'N-E': [ 'E1_0' ],
+      'N-N': [ 'E1_0', 'E1_1', 'E1_2', 'E1_3' ],
+      'N-W': [ ],
+      'E-S': [ ],
+      'E-E': [ ],
+      'E-N': [ ]
+    },
+    'downstream': { 'N': null, 'E': null, 'S': null, 'W': null },
+    fixed_timings: [ 7, 1, 7 ],
+    fixed_phase_order_idx: 0
+  },
+  'management': {
+    'top_mgr': [ 'clusterJ0_J1_J10_J11_#4more', 'clusterJ10_J11_J12_J13_#2more' ]
+  },
+  'management_neighbors': {
+    'top_mgr': [ ]
+  }
+}

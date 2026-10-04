@@ -155,3 +155,10 @@
             route: cologne8.rou.xml
             start_time: 25200    
             end_time: 28800
+
+        katubedda:
+            network: Simulation.net.xml
+            route: Simulation.rou.xml
+            flow: 0     # use the route file as-is (no demand scaling)
+            start_time: 0
+            end_time: 3600
